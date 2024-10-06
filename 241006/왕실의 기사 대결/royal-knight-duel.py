@@ -28,7 +28,7 @@ for i in range(1, n + 1):
             shields_dic[i].append([r - 1 + j, c - 1 + e])
 
 def check_move_soldier(idx, d):
-    if soldiers[idx] == 0:return (False, '')
+    if soldiers[idx] == 0:return (True, '')
     is_wall = False
     r, c, _, _, _ = soldiers[idx]
     q = dq([(r, c)])
