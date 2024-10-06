@@ -107,7 +107,9 @@ def santa_move(x, y, key):
         dist_tmp = distance((nx, ny), (r, c))
         if dist > dist_tmp:
             dist = dist_tmp
-            tmp.append([nx, ny, dist])
+            tmp.append([nx, ny, i])
+    tmp.sort(key=lambda x: x[2])
+    
     if not tmp:return
     nx, ny, toward = tmp.pop()
     if (r, c) == (nx, ny):
